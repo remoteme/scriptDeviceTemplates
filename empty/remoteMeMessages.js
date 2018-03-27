@@ -77,7 +77,7 @@ RemoteMeData.prototype.popUint32 = function () {
 };
 
 
-RemoteMeData.prototype.popRestArray = function () {
+RemoteMeData.prototype.popRestBuffer = function () {
 	var data = new Uint8Array(this.dataView.buffer, this.pos);
 	this.pos = this.size();
 	return getDataView(data).buffer;
